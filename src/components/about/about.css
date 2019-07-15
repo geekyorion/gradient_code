@@ -1,0 +1,73 @@
+.about-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    background-color: #03a9f4;
+    background: linear-gradient(90deg, #03a9f4, #9f7be3, #f441a5, #64c1ea, #9fea64, #1de07c, #9fea64, #64c1ea,#f441a5, #9f7be3, #03a9f4);
+    background-size: 1000%;
+    animation: animate 150s linear infinite;
+    color: white;
+}
+
+.about-content div {
+    text-shadow: 0 0 40px black;
+    background: transparent;
+    border: none;
+}
+
+.about-content .older-version {
+    color: white;
+    border: 1px solid white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition-duration: .25s;
+}
+
+.about-content .older-version:hover {
+    color: black;
+    background: white;
+    text-decoration: none;
+}
+
+.social-links {
+    display: inline-block;
+    width: 3em;
+    margin: -10px 10px;
+}
+
+.social-links svg {
+    width: auto;
+    stroke: white;
+    stroke-width: .75;
+    fill-opacity: 0;
+    fill: white;
+    transition-duration: .25s;
+}
+
+.social-links svg:hover {
+    fill-opacity: 1;
+    stroke-opacity: 0;
+}
+
+.author-info {
+    position: absolute;
+    bottom: 10px;
+}
+
+.author-name {
+    text-shadow: 0 0 10px black;
+}
+  
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
