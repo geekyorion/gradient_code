@@ -1,0 +1,17 @@
+.modify-wrapper {
+    min-height: 100vh;
+}
+
+.modify-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.input-controls {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background: #6c757d;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #333;
+}

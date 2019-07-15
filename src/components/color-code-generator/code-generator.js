@@ -32,6 +32,10 @@ const hsvGenerator = (color_array) => {
     }
 }
 
+const rgbGenerator = (hexCode) => {
+    return `rgb(${parseInt(hexCode.substring(0,2), 16)}, ${parseInt(hexCode.substring(2,4), 16)}, ${parseInt(hexCode.substring(4), 16)})`;
+}
+
 const hslGenerator = (color_array) => {
     var H = 0;
     var S = 0;
@@ -72,5 +76,6 @@ const hslGenerator = (color_array) => {
 export {
     hexGenerator,
     hslGenerator,
-    hsvGenerator
+    hsvGenerator,
+    rgbGenerator
 }
