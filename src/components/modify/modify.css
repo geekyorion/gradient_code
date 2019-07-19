@@ -9,9 +9,21 @@
 }
 
 .input-controls {
-    margin-bottom: 10px;
-    margin-right: 10px;
+    margin: 10px;
+    margin-top: 0;
     background: #6c757d;
     border-radius: 5px;
     box-shadow: 0 5px 10px #333;
+}
+
+.input-controls .input-group-text {
+    background: #343a40;
+    color: white;
+    border: none;
+}
+
+.input-controls .form-control {
+    background: #6c757d;
+    border: none;
+    color: white;
 }

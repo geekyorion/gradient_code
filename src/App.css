@@ -2,6 +2,7 @@
     position: fixed;
     margin: 10px;
     width: calc(100% - 20px);
+    z-index: 9999999;
 }
 
 .navbar {

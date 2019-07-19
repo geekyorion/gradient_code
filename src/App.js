@@ -18,8 +18,9 @@ function App() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               <Link className="nav-links" to="/">Home</Link>
-              <Link className="nav-links" to="gradients">Gradients</Link>
-              <Link className="nav-links" to="about">About</Link>
+              <Link className="nav-links" to="/gradients">Gradients</Link>
+              <Link className="nav-links" to="/user-gradients">Your Gradients</Link>
+              <Link className="nav-links" to="/about">About</Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

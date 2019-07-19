@@ -22,6 +22,8 @@ export default class CodeGenerator extends React.Component {
         // this.displayMessage = this.displayMessage.bind(this);
         this.rotateAntiClockWise = this.rotateAntiClockWise.bind(this);
         this.rotateClockWise = this.rotateClockWise.bind(this);
+        this.setLocalStorage = this.setLocalStorage.bind(this);
+        this.setLocalStorage();
     }
 
     /*
@@ -37,6 +39,11 @@ export default class CodeGenerator extends React.Component {
         // setTimeout(() => {para.remove();}, 1000);
     }
     */
+
+    setLocalStorage() {
+        var color = JSON.stringify({color1: this.state.color1, color2: this.state.color2})
+        localStorage.setItem(new Date().getTime(), color);
+    }
 
     generateRandom() {
         return parseInt(Math.random() * 255);
@@ -57,7 +64,10 @@ export default class CodeGenerator extends React.Component {
     }
 
     generateRandomBackground() {
-        this.setState({ angle: 135, color1: this.generateBackground().color_first, color2: this.generateBackground().color_second });
+        this.setState({ angle: 135, color1: this.generateBackground().color_first, color2: this.generateBackground().color_second }, () => {
+            //set the colors to the local storage for user to see that colors
+            this.setLocalStorage();
+        });
     }
 
     rotateAntiClockWise() {

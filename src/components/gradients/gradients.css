@@ -1,0 +1,50 @@
+.gradient-wrapper {
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+    background-color: #03a9f4;
+    background: linear-gradient(90deg, #03a9f4, #9f7be3, #f441a5, #64c1ea, #9fea64, #1de07c, #9fea64, #64c1ea,#f441a5, #9f7be3, #03a9f4);
+    background-size: 1000%;
+    animation: animate 150s linear infinite;
+}
+
+.gradient-row {
+    margin: 20px;
+    margin-top: 72px;
+}
+
+.gradient-info {
+    color: white;
+    padding: 10px;
+    line-height: 5px;
+}
+
+.gradient-box {
+    border-radius: 10px;
+    margin: 5px;
+    transition-duration: .25s;
+}
+
+.modify-gradient {
+    position: relative;
+    top: 70%;
+    visibility: hidden;
+}
+
+.gradient-box:hover {
+    border: 1px solid;
+}
+
+.gradient-box:hover .modify-gradient {
+    visibility: visible;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}

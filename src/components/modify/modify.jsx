@@ -71,28 +71,33 @@ export default class Modify extends React.Component {
                     <div className="input-controls">
                         <InputGroup>
                             <InputGroup.Prepend>
-                                <InputGroup.Text id="basic-addon1">Color-1</InputGroup.Text>
+                                <InputGroup.Text id="modify-color1">Color-1</InputGroup.Text>
                             </InputGroup.Prepend>
                             <FormControl
                                 type="color"
-                                defaultValue={this.state.HEX_1}
                                 value={this.state.HEX_1}
                                 onChange={(e) => {this.changeColor1(e)}}
                             />
                             <InputGroup.Prepend>
-                                <InputGroup.Text id="basic-addon1">Color-2</InputGroup.Text>
+                                <InputGroup.Text id="modify-color2">Color-2</InputGroup.Text>
                             </InputGroup.Prepend>
                             <FormControl
                                 type="color"
-                                defaultValue={this.state.HEX_2}
                                 value={this.state.HEX_2}
                                 onChange={(e) => {this.changeColor2(e)}}
                             />
                             <InputGroup.Prepend>
-                                <InputGroup.Text id="basic-addon1">Angle</InputGroup.Text>
+                                <InputGroup.Text id="modify-angle">Angle</InputGroup.Text>
                             </InputGroup.Prepend>
                             <FormControl
                                 type="range"
+                                min="0"
+                                max="360"
+                                value={this.state.angle}
+                                onChange={(e) => {this.changeAngle(e)}}
+                            />
+                            <FormControl
+                                type="number"
                                 min="0"
                                 max="360"
                                 value={this.state.angle}

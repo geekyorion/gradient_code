@@ -12,6 +12,7 @@ const Routing = () => (
         <Route path="/index" component={CodeGenerator} />
         <Route path="/home" component={CodeGenerator} />
         <Route path="/gradients" component={Gradients} />
+        <Route path="/user-gradients" component={Gradients} />
         <Route path="/about" component={About} />
         <Route path="/modify" component={Modify} />
         <Route path="/*" component={ErrorPage} />
