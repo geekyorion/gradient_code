@@ -59,6 +59,14 @@ export default class Modify extends React.Component {
 
     changeAngle(e) {
         var value = e.target.value;
+        if (!value) {
+            value = 0;
+        }
+        value = parseInt(value, 10);
+        if (value > 360) {
+            value = value % 360;
+        }
+
         this.setState({
             angle: value
         });
@@ -76,7 +84,7 @@ export default class Modify extends React.Component {
                             <FormControl
                                 type="color"
                                 value={this.state.HEX_1}
-                                onChange={(e) => {this.changeColor1(e)}}
+                                onChange={(e) => { this.changeColor1(e) }}
                             />
                             <InputGroup.Prepend>
                                 <InputGroup.Text id="modify-color2">Color-2</InputGroup.Text>
@@ -84,7 +92,7 @@ export default class Modify extends React.Component {
                             <FormControl
                                 type="color"
                                 value={this.state.HEX_2}
-                                onChange={(e) => {this.changeColor2(e)}}
+                                onChange={(e) => { this.changeColor2(e) }}
                             />
                             <InputGroup.Prepend>
                                 <InputGroup.Text id="modify-angle">Angle</InputGroup.Text>
@@ -94,14 +102,14 @@ export default class Modify extends React.Component {
                                 min="0"
                                 max="360"
                                 value={this.state.angle}
-                                onChange={(e) => {this.changeAngle(e)}}
+                                onChange={(e) => { this.changeAngle(e) }}
                             />
                             <FormControl
                                 type="number"
                                 min="0"
                                 max="360"
                                 value={this.state.angle}
-                                onChange={(e) => {this.changeAngle(e)}}
+                                onChange={(e) => { this.changeAngle(e) }}
                             />
                         </InputGroup>
                     </div>
@@ -115,7 +123,7 @@ export default class Modify extends React.Component {
                             <ViewGradients show={this.state.modalShowView} onHide={() => this.setState({ modalShowView: false })} color1={this.state.color1} color2={this.state.color2} />
 
                             <Button variant="secondary" onClick={() => this.setState({ modalShowDownload: true })}>Download<span className="download-button-icon">&#10143;</span></Button>
-                            <DownloadFile show={this.state.modalShowDownload} onHide={() => this.setState({ modalShowDownload: false })} color1={this.state.color1} color2={this.state.color2} angle={this.state.degrees} />
+                            <DownloadFile show={this.state.modalShowDownload} onHide={() => this.setState({ modalShowDownload: false })} color1={this.state.color1} color2={this.state.color2} angle={this.state.angle} />
                             {/* <DropdownButton size="md" as={ButtonGroup} variant="success" title="Download" id="bg-nested-dropdown">
                                 <Dropdown.Item size="md" eventKey="1">Link1</Dropdown.Item>
                                 <Dropdown.Item size="md" eventKey="2">Link2</Dropdown.Item>

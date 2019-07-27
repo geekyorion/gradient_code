@@ -106,7 +106,7 @@ class DownloadFile extends React.Component {
             context.fillRect(0, 0, width, height);
 
             // change the canvas into data URL
-            e.target.download += new Date().getTime()+".png";
+            e.target.download += new Date().getTime() + ".png";
             e.target.href = canvas.toDataURL('image/png');
         }
     }
@@ -121,7 +121,7 @@ class DownloadFile extends React.Component {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Table striped bordered hover responsive size="sm" className="text-center table-download">
+                    <Table striped bordered hover responsive size="sm" className="text-center table-vertical-center">
                         <thead>
                             <tr>
                                 <th>Resolutions</th>
@@ -238,10 +238,30 @@ class ViewGradients extends React.Component {
                                         <Card.Title>Color-1 Details</Card.Title>
                                         <div className="card-color-box" style={{ background: this.props.color1 }}></div>
                                         <Card.Text>
-                                            <span className="card-color-spans"><strong>RGB code:</strong> {this.props.color1}</span>
+                                            <Table striped responsive bordered hover size="sm" className="text-center table-vertical-center">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>RGB code:</th>
+                                                        <td>{this.props.color1}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>HEX code:</th>
+                                                        <td>{this.HEX_1}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>HSL code:</th>
+                                                        <td>{this.HSL_1}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>HSV code:</th>
+                                                        <td>{this.HSV_1}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </Table>
+                                            {/* <span className="card-color-spans"><strong>RGB code:</strong> {this.props.color1}</span>
                                             <span className="card-color-spans"><strong>HEX code:</strong> {this.HEX_1}</span>
                                             <span className="card-color-spans"><strong>HSL code:</strong> {this.HSL_1}</span>
-                                            <span className="card-color-spans"><strong>HSV code:</strong> {this.HSV_1}</span>
+                                            <span className="card-color-spans"><strong>HSV code:</strong> {this.HSV_1}</span> */}
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
@@ -253,10 +273,30 @@ class ViewGradients extends React.Component {
                                         <Card.Title>Color-2 Details</Card.Title>
                                         <div className="card-color-box" style={{ background: this.props.color2 }}></div>
                                         <Card.Text>
-                                            <span className="card-color-spans"><strong>RGB code:</strong> {this.props.color2}</span>
+                                            <Table striped responsive bordered hover size="sm" className="text-center table-vertical-center">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>RGB code:</th>
+                                                        <td>{this.props.color2}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>HEX code:</th>
+                                                        <td>{this.HEX_2}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>HSL code:</th>
+                                                        <td>{this.HSL_2}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>HSV code:</th>
+                                                        <td>{this.HSV_2}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </Table>
+                                            {/* <span className="card-color-spans"><strong>RGB code:</strong> {this.props.color2}</span>
                                             <span className="card-color-spans"><strong>HEX code:</strong> {this.HEX_2}</span>
                                             <span className="card-color-spans"><strong>HSL code:</strong> {this.HSL_2}</span>
-                                            <span className="card-color-spans"><strong>HSV code:</strong> {this.HSV_2}</span>
+                                            <span className="card-color-spans"><strong>HSV code:</strong> {this.HSV_2}</span> */}
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>

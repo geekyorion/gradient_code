@@ -17,7 +17,8 @@
 }
 
 .color-card-title {
-    filter: drop-shadow(0 0 5px white);
+    color: white;
+    filter: drop-shadow(0 0 10px #000);
 }
 
 .grid-columns {
@@ -28,9 +29,9 @@
     height: 100%;
 }
 
-.card-color-spans {
+/* .card-color-spans {
     display: block;
-}
+} */
 
 .carousel-gradient {
     border-radius: 5px;
@@ -46,7 +47,7 @@
     border-radius: 5px;
 }
 
-.table-download td, .table-download th {
+.table-vertical-center td, .table-vertical-center th {
     vertical-align: middle !important;
 }
 

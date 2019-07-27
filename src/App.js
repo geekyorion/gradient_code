@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <div className="wrapper">
-        <Navbar collapseOnSelect expand="lg">
+        <Navbar collapseOnSelect expand="lg" variant="dark">
           <Navbar.Brand>
             <Link className="nav-links" to="/">Gradient Code</Link>
           </Navbar.Brand>
