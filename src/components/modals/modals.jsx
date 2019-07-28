@@ -82,23 +82,31 @@ class DownloadFile extends React.Component {
         if (isNaN(width) || isNaN(height)) {
             return
         } else {
-            var angle = this.props.angle;
+            var angle = this.props.angle + 270;
+            if (angle > 360) {
+                angle -= 360;
+            }
+            var angleRad = angle * Math.PI / 180;
             var canvas = document.createElement("canvas");
             canvas.setAttribute("width", width);
             canvas.setAttribute("height", height);
-
             var context = canvas.getContext("2d");
-            var fillGradient = null;
-            switch (angle) {
-                case 45: fillGradient = context.createLinearGradient(0, height, width, 0); break;
-                case 90: fillGradient = context.createLinearGradient(0, 0, width, 0); break;
-                case 135: fillGradient = context.createLinearGradient(0, 0, width, height); break;
-                case 180: fillGradient = context.createLinearGradient(0, 0, 0, height); break;
-                case 225: fillGradient = context.createLinearGradient(width, 0, 0, height); break;
-                case 270: fillGradient = context.createLinearGradient(width, 0, 0, 0); break;
-                case 315: fillGradient = context.createLinearGradient(width, height, 0, 0); break;
-                default: fillGradient = context.createLinearGradient(0, height, 0, 0); break;
-            }
+
+            // set the parameter to create the canvas with gradient
+            var midx = width / 2;
+            var midy = height / 2;
+            var angleX = Math.cos(angleRad);
+            var angleY = Math.sin(angleRad);
+            var length = Math.abs(width * angleX) + Math.abs(height * angleY);
+            var half = length / 2;
+
+            // points for linear gradient
+            var endx = midx + half * angleX;
+            var endy = midy + half * angleY;
+            var startx = midx + half * (-angleX);
+            var starty = midy + half * (-angleY);
+
+            var fillGradient = context.createLinearGradient(startx, starty, endx, endy);
 
             fillGradient.addColorStop(0, this.props.color1);
             fillGradient.addColorStop(1, this.props.color2);
