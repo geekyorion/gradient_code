@@ -3,6 +3,7 @@ import getColors from './colors';
 import { Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './gradients.css';
+import { hexGenerator } from './../color-code-generator/code-generator';
 
 var userColors = [];
 
@@ -28,6 +29,7 @@ export default class Gradients extends React.Component {
         this.initScrollEvent = this.initScrollEvent.bind(this);
         this.loadingHandler = this.loadingHandler.bind(this);
         this.initiateLoading = this.initiateLoading.bind(this);
+        this.removeColor = this.removeColor.bind(this);
     }
 
     initScrollEvent() {
@@ -42,15 +44,28 @@ export default class Gradients extends React.Component {
         };
     }
 
+    removeColor(key) {
+        localStorage.removeItem(key);
+        var filteredColors = this.state.allColors.filter(color => color.key !== key);
+        this.setState({ allColors: filteredColors }, () => {
+            this.loadMoreUserColors();
+        });
+    }
+
     pushColors(colors) {
         var colorList = [];
         colors.forEach((color, idx) => {
             var key = Object.keys(color)[0];
             var value = JSON.parse(color[key]);
-            var element = (<Col xs="12" sm="6" md="3" key={key} style={{padding: "0"}}>
-                <div className="gradient-box" style={{background: `linear-gradient(135deg, ${value.color1}, ${value.color2})`, height: "200px"}}>
+            var element = (<Col xs="12" sm="6" md="3" key={key} style={{ padding: "0" }}>
+                <div className="gradient-box" style={{ background: `linear-gradient(135deg, ${value.color1}, ${value.color2})`, height: "200px" }}>
+                    {this.state.mainComponent ? '' :
+                        <Button variant="danger" size="sm" className="delete-gradient" onClick={() => { this.removeColor(key); }}>
+                            <span>&#10005;</span>
+                        </Button>
+                    }
                     <Button variant="info" className="modify-gradient">
-                        <Link to={{ pathname: '/modify', state: { color1: value.color1, color2: value.color2} }} className="modify-link">
+                        <Link to={{ pathname: '/modify', state: { color1: value.color1, color2: value.color2 } }} className="modify-link">
                             View / Modify
                         </Link>
                     </Button>
@@ -105,7 +120,7 @@ export default class Gradients extends React.Component {
                 this.loadMoreUserColors();
             }
         });
-        
+
         this.loadTime = 1;
 
         this.setState({
@@ -118,8 +133,9 @@ export default class Gradients extends React.Component {
 
     initiateLoading() {
         if (this.props.location.pathname === "/user-gradients") {
-            this.loadUserColors();
-            this.setState({ mainComponent: false })
+            this.setState({ mainComponent: false }, () => {
+                this.loadUserColors();
+            });
         } else {
             this.loadMainColors();
         }
@@ -137,11 +153,21 @@ export default class Gradients extends React.Component {
                 <div className="gradient-row text-center">
                     <div className="gradient-info">
                         {heading}
-                        <span>Hover/click on gradients to further modify them</span>
+                        <span>Hover/click on gradients to get further information</span>
                     </div>
                     <Row>
-                        {this.state.allColors}
+                        {this.state.allColors.length ? this.state.allColors :
+                            <div className="empty-gradient">
+                                <h2>You didn't generate any gradient.</h2>
+                            </div>
+                        }
                     </Row>
+                    {!this.state.allColors.length || this.state.mainComponent ? '' : <div>
+                        <Button variant="danger" onClick={() => {
+                            localStorage.clear();
+                            this.setState({ allColors: [] });
+                        }} className="delete-all">Delete All Gradients</Button>
+                    </div>}
                 </div>
             </div>
         );

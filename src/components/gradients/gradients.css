@@ -3,7 +3,7 @@
     text-align: center;
     overflow-x: hidden;
     background-color: #03a9f4;
-    background: linear-gradient(90deg, #03a9f4, #9f7be3, #f441a5, #64c1ea, #9fea64, #1de07c, #9fea64, #64c1ea,#f441a5, #9f7be3, #03a9f4);
+    background: linear-gradient(90deg, #03a9f47f, #9f7be37f, #f441a57f, #64c1ea7f, #1de07c7f, #64c1ea7f, #f441a57f, #9f7be37f, #03a9f47f);
     background-size: 1000%;
     animation: animate 150s linear infinite;
 }
@@ -16,13 +16,20 @@
 .gradient-info {
     color: white;
     padding: 10px;
-    line-height: 5px;
+    margin-bottom: 10px;
 }
 
 .gradient-box {
     border-radius: 10px;
     margin: 5px;
     transition-duration: .25s;
+    position: relative;
+}
+
+.delete-gradient {
+    position: absolute;
+    right: 5%;
+    top: 5%;
 }
 
 .modify-gradient {
@@ -37,6 +44,17 @@
 
 .gradient-box:hover .modify-gradient {
     visibility: visible;
+}
+
+.empty-gradient {
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+}
+
+.delete-all {
+    margin: 10px;
 }
 
 @keyframes animate {
