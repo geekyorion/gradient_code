@@ -64,6 +64,9 @@ export default class Gradients extends React.Component {
                             <span>&#10005;</span>
                         </Button>
                     }
+                    <div className="hexCodes">
+                        <span>#{hexGenerator(value.color1).HEX} &#8658; #{hexGenerator(value.color2).HEX}</span>
+                    </div>
                     <Button variant="info" className="modify-gradient">
                         <Link to={{ pathname: '/modify', state: { color1: value.color1, color2: value.color2 } }} className="modify-link">
                             View / Modify

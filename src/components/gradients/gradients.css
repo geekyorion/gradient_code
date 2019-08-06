@@ -57,6 +57,16 @@
     margin: 10px;
 }
 
+.hexCodes {
+    color: white;
+    font-size: .88em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 100%;
+}
+
 @keyframes animate {
     0% {
         background-position: 0%;
