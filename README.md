@@ -1,6 +1,6 @@
 # gradient_code
-Create, edit, view and download gradients at a single place
-For see this in live action please visit http://gradientcode.herokuapp.com
+Create, edit, view and download gradients at a single place <br />
+To see this in live action please visit http://gradientcode.herokuapp.com
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -11,7 +11,7 @@ In the project directory, you can run:
 
 ### `npm run dev`
 
-Runs the app in the development mode
+Runs the app in the development mode <br />
 This is used to deploy the app on heroku platform
 
 ### `npm start`
