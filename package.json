@@ -2,13 +2,15 @@
   "name": "gradient_code",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://geekyorion.github.io/gradient_code",
+  "description": "Generate cool random gradients with one click",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "prismjs": "^1.16.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.9",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
+    "bootstrap": "^4.5.3",
+    "prismjs": "^1.22.0",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.1",
     "serve": "11.1.0"
   },
@@ -18,7 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }

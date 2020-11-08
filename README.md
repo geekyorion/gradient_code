@@ -1,7 +1,7 @@
 # gradient_code
-Create, edit, view and download gradients at a single place <br />
-To see this in live action please visit http://gradientcode.herokuapp.com
 
+Create, edit, view and download gradients at a single place <br />
+To see this in live action please visit [Heroku](http://gradientcode.herokuapp.com) or [Gh-Pages](http://geekyorion.github.io/gradient_code)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
