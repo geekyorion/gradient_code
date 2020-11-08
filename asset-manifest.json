@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/gradient_code/static/css/main.2145d764.chunk.css",
+    "main.js": "/gradient_code/static/js/main.0d440cee.chunk.js",
+    "main.js.map": "/gradient_code/static/js/main.0d440cee.chunk.js.map",
+    "runtime~main.js": "/gradient_code/static/js/runtime~main.4e4289e5.js",
+    "runtime~main.js.map": "/gradient_code/static/js/runtime~main.4e4289e5.js.map",
+    "static/css/2.510409cd.chunk.css": "/gradient_code/static/css/2.510409cd.chunk.css",
+    "static/js/2.071249d1.chunk.js": "/gradient_code/static/js/2.071249d1.chunk.js",
+    "static/js/2.071249d1.chunk.js.map": "/gradient_code/static/js/2.071249d1.chunk.js.map",
+    "index.html": "/gradient_code/index.html",
+    "precache-manifest.d12eae4a8e4a759f1e5c76844cc4daed.js": "/gradient_code/precache-manifest.d12eae4a8e4a759f1e5c76844cc4daed.js",
+    "service-worker.js": "/gradient_code/service-worker.js",
+    "static/css/2.510409cd.chunk.css.map": "/gradient_code/static/css/2.510409cd.chunk.css.map",
+    "static/css/main.2145d764.chunk.css.map": "/gradient_code/static/css/main.2145d764.chunk.css.map"
+  }
+}
