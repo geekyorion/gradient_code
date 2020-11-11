@@ -2,7 +2,7 @@
   "name": "gradient_code",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://geekyorion.github.io/gradient_code",
+  "homepage": "/",
   "description": "Generate cool random gradients with one click",
   "dependencies": {
     "bootstrap": "^4.5.3",
