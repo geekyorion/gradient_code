@@ -5,7 +5,7 @@
 .modify-controls {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .input-controls {
@@ -14,6 +14,17 @@
     background: #6c757d;
     border-radius: 5px;
     box-shadow: 0 5px 10px #333;
+    max-width: 650px;
+    display: flex;
+}
+
+.input-group.angle-range {
+    min-width: 200px;
+    flex-wrap: nowrap;
+}
+
+.angle-range .form-control-range {
+    margin-left: 15px;
 }
 
 .input-controls .input-group-text {
@@ -26,4 +37,43 @@
     background: #6c757d;
     border: none;
     color: white;
+}
+
+.angle-range-numeric {
+    min-width: 70px !important;
+    text-align: center;
+    padding-right: 6px !important;
+}
+
+.input-controls .input-group-prepend {
+    margin: 0;
+}
+
+@media (max-width: 950px) {
+    .modify-controls {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .input-controls .input-group:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+    .input-controls {
+        flex-wrap: wrap;
+        max-width: 382px;
+    }
+    .input-controls .input-group-text {
+        width: 148px;
+        justify-content: center;
+    }
+    .input-controls .input-group-text {
+        border-radius: 0;
+    }
+    .input-controls #modify-color1 {
+        border-top-left-radius: 0.25rem;
+    }
+    .input-controls #modify-angle {
+        border-bottom-left-radius: 0.25rem;
+    }
 }

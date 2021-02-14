@@ -105,10 +105,13 @@ export default class Gradients extends React.Component {
     loadUserColors() {
         userColors = [];
         var colorKeys = Object.keys(localStorage);
+        colorKeys.sort().reverse();
         for (var i = 0; i <= colorKeys.length - 1; i++) {
             let key = colorKeys[i];
-            let value = localStorage.getItem(key);
-            userColors.push({ [key]: value });
+            if(key.startsWith('gradient-')) {
+                let value = localStorage.getItem(key);
+                userColors.push({ [key]: value });
+            }
         }
         var colors = getUserColors(this.state.startIndex, this.state.limitColors);
 
