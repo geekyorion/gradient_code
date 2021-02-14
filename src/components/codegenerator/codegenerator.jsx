@@ -41,8 +41,8 @@ export default class CodeGenerator extends React.Component {
     */
 
     setLocalStorage() {
-        var color = JSON.stringify({color1: this.state.color1, color2: this.state.color2})
-        localStorage.setItem(new Date().getTime(), color);
+        var color = JSON.stringify({color1: this.state.color1, color2: this.state.color2});
+        localStorage.setItem(`gradient-${new Date().getTime()}`, color);
     }
 
     generateRandom() {

@@ -86,6 +86,8 @@ export default class Modify extends React.Component {
                                 value={this.state.HEX_1}
                                 onChange={(e) => { this.changeColor1(e) }}
                             />
+                        </InputGroup>
+                        <InputGroup>
                             <InputGroup.Prepend>
                                 <InputGroup.Text id="modify-color2">Color-2</InputGroup.Text>
                             </InputGroup.Prepend>
@@ -94,6 +96,8 @@ export default class Modify extends React.Component {
                                 value={this.state.HEX_2}
                                 onChange={(e) => { this.changeColor2(e) }}
                             />
+                        </InputGroup>
+                        <InputGroup className="angle-range">
                             <InputGroup.Prepend>
                                 <InputGroup.Text id="modify-angle">Angle</InputGroup.Text>
                             </InputGroup.Prepend>
@@ -105,6 +109,7 @@ export default class Modify extends React.Component {
                                 onChange={(e) => { this.changeAngle(e) }}
                             />
                             <FormControl
+                                className="angle-range-numeric"
                                 type="number"
                                 min="0"
                                 max="360"
