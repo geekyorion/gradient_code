@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gradient_code/static/css/main.2145d764.chunk.css",
-    "main.js": "/gradient_code/static/js/main.124fa725.chunk.js",
-    "main.js.map": "/gradient_code/static/js/main.124fa725.chunk.js.map",
+    "main.css": "/gradient_code/static/css/main.db8be5b9.chunk.css",
+    "main.js": "/gradient_code/static/js/main.70e273ba.chunk.js",
+    "main.js.map": "/gradient_code/static/js/main.70e273ba.chunk.js.map",
     "runtime~main.js": "/gradient_code/static/js/runtime~main.4e4289e5.js",
     "runtime~main.js.map": "/gradient_code/static/js/runtime~main.4e4289e5.js.map",
     "static/css/2.e18a25e7.chunk.css": "/gradient_code/static/css/2.e18a25e7.chunk.css",
     "static/js/2.a8907982.chunk.js": "/gradient_code/static/js/2.a8907982.chunk.js",
     "static/js/2.a8907982.chunk.js.map": "/gradient_code/static/js/2.a8907982.chunk.js.map",
     "index.html": "/gradient_code/index.html",
-    "precache-manifest.430e3496f09d8afb151e07ed378e09ee.js": "/gradient_code/precache-manifest.430e3496f09d8afb151e07ed378e09ee.js",
+    "precache-manifest.7950e5d47da58fe8fb7515e1e9fc9beb.js": "/gradient_code/precache-manifest.7950e5d47da58fe8fb7515e1e9fc9beb.js",
     "service-worker.js": "/gradient_code/service-worker.js",
     "static/css/2.e18a25e7.chunk.css.map": "/gradient_code/static/css/2.e18a25e7.chunk.css.map",
-    "static/css/main.2145d764.chunk.css.map": "/gradient_code/static/css/main.2145d764.chunk.css.map"
+    "static/css/main.db8be5b9.chunk.css.map": "/gradient_code/static/css/main.db8be5b9.chunk.css.map"
   }
 }
